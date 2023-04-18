@@ -4,14 +4,20 @@ class Common
 {
     protected function server()
     {
-        $pdo = new PDO('mysql:host=hogehogehoge;dbname=hogehoge;charset=utf8;', 'hogehoge', 'hogehogehoge');
+        // ↓ サーバー環境
+        $pdo = new PDO('mysql:host=mysql57.shimo-works.sakura.ne.jp;dbname=shimo-works_hiroyasushimo;charset=utf8;', 'shimo-works', '2_saeUW9ykWDJig');
+        // ↓ ローカル環境
+        // $pdo = new PDO('mysql:host=127.0.0.1;dbname=hiroyasushimo;charset=utf8;', 'root', '');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $pdo;
     }
 
     protected static function static_server()
     {
-        $pdo = new PDO('mysql:host=hogehogehoge;dbname=hogehoge;charset=utf8;', 'hogehoge', 'hogehogehoge');
+        // ↓ サーバー環境
+        $pdo = new PDO('mysql:host=mysql57.shimo-works.sakura.ne.jp;dbname=shimo-works_hiroyasushimo;charset=utf8;', 'shimo-works', '2_saeUW9ykWDJig');
+        // ↓ ローカル環境
+        // $pdo = new PDO('mysql:host=127.0.0.1;dbname=hiroyasushimo;charset=utf8;', 'root', '');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $pdo;
     }
